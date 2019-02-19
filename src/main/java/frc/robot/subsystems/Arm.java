@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Spark;
 import frc.robot.RobotMap;
+import frc.robot.commands.ArmUp;
 
 public class Arm extends Subsystem {
 
@@ -12,6 +13,7 @@ public class Arm extends Subsystem {
     public Spark top_motor = RobotMap.m_arm_bottom;
 
     public void initDefaultCommand() {
+        
     }
 
     public void forward() {
@@ -28,4 +30,5 @@ public class Arm extends Subsystem {
         bottom_motor.set(0);
         top_motor.set(0);
     }
+
 }
