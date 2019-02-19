@@ -28,11 +28,12 @@ public class OI {
   public Joystick right_stick = new Joystick(1);
   public Button armUpButton = new JoystickButton(left_stick, 0);
   public Button armDownButton = new JoystickButton(right_stick, 0);
-
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.
-
+  public OI(){
+    armUpButton.whileHeld(new ArmUp());
+  }
   //// TRIGGERING COMMANDS WITH BUTTONS
   // Once you have a button, it's trivial to bind it to a button in one of
   // three ways:
@@ -49,8 +50,4 @@ public class OI {
   // until it is finished as determined by it's isFinished method.
   // button.whenReleased(new ExampleCommand());
 
-}
-
-public OI() {
-  armUpButton.whileHeld(new ArmUp());
 }

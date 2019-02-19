@@ -18,7 +18,7 @@ import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.RobotMap;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Arm;
-import frc.robot.commands.ArmMotion;
+import frc.robot.commands.ArmUp;
 
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
