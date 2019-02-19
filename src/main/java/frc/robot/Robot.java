@@ -51,9 +51,9 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
+    arm = new Arm();
     m_oi = new OI();
     drivetrain = new DriveTrain();
-    arm = new Arm();
 
     m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
