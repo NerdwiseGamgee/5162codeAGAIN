@@ -10,6 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.ArmUp;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -25,9 +26,9 @@ public class OI {
   // Button button = new JoystickButton(stick, buttonNumber);
   public Joystick left_stick = new Joystick(0);
   public Joystick right_stick = new Joystick(1);
-  Button armUpButton = new JoystickButton(left_stick, 0);
-  Button armDownButton = new JoystickButton(right_stick, 0);
-  armUpButton.whenHeld(new ArmUp());
+  public Button armUpButton = new JoystickButton(left_stick, 0);
+  public Button armDownButton = new JoystickButton(right_stick, 0);
+
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.
@@ -48,4 +49,8 @@ public class OI {
   // until it is finished as determined by it's isFinished method.
   // button.whenReleased(new ExampleCommand());
 
+}
+
+public OI() {
+  armUpButton.whileHeld(new ArmUp());
 }
