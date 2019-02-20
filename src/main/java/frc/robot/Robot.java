@@ -18,6 +18,7 @@ import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.RobotMap;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Arm;
+import frc.robot.subsystems.Basket;
 import frc.robot.commands.ArmUp;
 import frc.robot.commands.ArmDown;
 
@@ -41,6 +42,7 @@ public class Robot extends TimedRobot {
   public static OI m_oi;
   public static DriveTrain drivetrain;
   public static Arm arm;
+  public static Basket basket;
   //public static RobotMap rmap;
 
   Command m_autonomousCommand;
@@ -53,6 +55,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     arm = new Arm();
+    basket = new Basket();
     m_oi = new OI();
     drivetrain = new DriveTrain();
 

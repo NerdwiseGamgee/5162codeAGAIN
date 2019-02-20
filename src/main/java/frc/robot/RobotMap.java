@@ -7,9 +7,13 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.Solenoid;
+
 import com.kauailabs.navx.frc.AHRS;
 
 /**
@@ -41,7 +45,11 @@ public class RobotMap {
    ************************************************************************/
 
   public static AHRS ahrs = new AHRS(SPI.Port.kMXP);
-
+  public static Compressor compressor = new Compressor(0);
+  public static Solenoid driveSolenoid = new Solenoid(1);
+  public static Solenoid shootSolenoid = new Solenoid(2);
+  public static DoubleSolenoid doubleSolenoid = new DoubleSolenoid(3, 4);
+  
   // If you are using multiple modules, make sure to define both the port
   // number and the module. For example you with a rangefinder:
   // public static int rangefinderPort = 1;

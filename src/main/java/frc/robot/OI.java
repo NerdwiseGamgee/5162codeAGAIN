@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.ArmDown;
 import frc.robot.commands.ArmUp;
+import frc.robot.commands.BasketDown;
+import frc.robot.commands.BasketUp;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -29,12 +31,26 @@ public class OI {
   public Joystick right_stick = new Joystick(1);
   public Button armUpButton = new JoystickButton(left_stick, 1);
   public Button armDownButton = new JoystickButton(right_stick, 1);
+  public Button shootButton = new JoystickButton(right_stick, 2);
+  public Button basketUpButton = new JoystickButton(left_stick, 3); 
+  public Button basketDownButton = new JoystickButton(left_stick, 2);
+
+
+
+
+
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.
   public OI(){
     armUpButton.whileHeld(new ArmUp());
     armDownButton.whileHeld(new ArmDown());
+    basketUpButton.whileHeld(new BasketUp());
+    basketDownButton.whileHeld(new BasketDown());
+    //c.setClosedLoopControl(true);
+    //c.setClosedLoopControl(false);
+    //exampleSolenoid.set(true);
+    //exampleSolenoid.set(false);
   }
   //// TRIGGERING COMMANDS WITH BUTTONS
   // Once you have a button, it's trivial to bind it to a button in one of
