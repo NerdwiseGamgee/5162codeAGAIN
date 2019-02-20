@@ -1,8 +1,0 @@
-Warning at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:274): Robots should not quit, but yours did! 
-ERROR  1  The startCompetition() method (or methods called by it) should have handled the exception above.  edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:276) 
-ERROR  1  Unhandled exception: java.lang.IllegalArgumentException: Subsystem must not be null.  frc.robot.commands.ArmUp.<init>(ArmUp.java:11) 
-Warning at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:274): Robots should not quit, but yours did! 
-ERROR  1  The startCompetition() method (or methods called by it) should have handled the exception above.  edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:276) 
-ERROR  1  Unhandled exception: java.lang.IllegalArgumentException: Subsystem must not be null.  frc.robot.commands.ArmUp.<init>(ArmUp.java:11) 
-ERROR  1  The startCompetition() method (or methods called by it) should have handled the exception above.  edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:276) 
-Warning at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:274): Robots should not quit, but yours did! 
