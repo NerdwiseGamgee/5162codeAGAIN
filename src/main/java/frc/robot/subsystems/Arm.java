@@ -15,20 +15,20 @@ public class Arm extends Subsystem {
     public void initDefaultCommand() {
         
     }
-
+//Speed when Lowering Arm
     public void forward() {
-        bottom_motor.set(1);
-        top_motor.set(1);
+        bottom_motor.set(.4);
+        top_motor.set(.4);
     }
-
+//Speed when Raising Arm
     public void reverse() {
-        bottom_motor.set(-1);
-        top_motor.set(-1);
+        bottom_motor.set(-.5);
+        top_motor.set(-.5);
     }
-
+//Holds Arm at Current Position
     public void stop() {
-        bottom_motor.set(0);
-        top_motor.set(0);
+        bottom_motor.set(-.05);
+        top_motor.set(-.05);
     }
 
 }
