@@ -5,19 +5,19 @@ import frc.robot.Robot;
 /**
  *
  */
-public class ArmUp extends Command {
+public class ArmDown extends Command {
 
-    public ArmUp() {
+    public ArmDown() {
         requires(Robot.arm);
        // setTimeout(0.9);
     }
 
     protected void initialize() {
-    	Robot.arm.reverse();
+    	Robot.arm.forward();
     }
 
     protected void execute() {
-        Robot.arm.reverse();
+        Robot.arm.forward();
     }
 
     protected boolean isFinished() {

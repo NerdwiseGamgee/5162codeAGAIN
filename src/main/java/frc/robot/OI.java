@@ -10,6 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.ArmDown;
 import frc.robot.commands.ArmUp;
 
 /**
@@ -26,13 +27,14 @@ public class OI {
   // Button button = new JoystickButton(stick, buttonNumber);
   public Joystick left_stick = new Joystick(0);
   public Joystick right_stick = new Joystick(1);
-  public Button armUpButton = new JoystickButton(left_stick, 0);
-  public Button armDownButton = new JoystickButton(right_stick, 0);
+  public Button armUpButton = new JoystickButton(left_stick, 1);
+  public Button armDownButton = new JoystickButton(right_stick, 1);
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.
   public OI(){
     armUpButton.whileHeld(new ArmUp());
+    armDownButton.whileHeld(new ArmDown());
   }
   //// TRIGGERING COMMANDS WITH BUTTONS
   // Once you have a button, it's trivial to bind it to a button in one of
