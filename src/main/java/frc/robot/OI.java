@@ -10,10 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.robot.commands.ArmDown;
-import frc.robot.commands.ArmUp;
-import frc.robot.commands.BasketDown;
-import frc.robot.commands.BasketUp;
+import frc.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -34,6 +31,8 @@ public class OI {
   public Button shootButton = new JoystickButton(right_stick, 2);
   public Button basketUpButton = new JoystickButton(left_stick, 3); 
   public Button basketDownButton = new JoystickButton(left_stick, 2);
+  public Button intakeInButton = new JoystickButton(left_stick, 4);
+  public Button intakeOutButton = new JoystickButton(left_stick, 5);
 
 
 
@@ -47,6 +46,8 @@ public class OI {
     armDownButton.whileHeld(new ArmDown());
     basketUpButton.whileHeld(new BasketUp());
     basketDownButton.whileHeld(new BasketDown());
+    intakeInButton.whileHeld(new IntakeShoot());
+    intakeOutButton.whileHeld(new IntakeSuck());
     //c.setClosedLoopControl(true);
     //c.setClosedLoopControl(false);
     //exampleSolenoid.set(true);

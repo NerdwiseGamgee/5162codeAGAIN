@@ -5,19 +5,19 @@ import frc.robot.Robot;
 /**
  *
  */
-public class ArmDown extends Command {
+public class IntakeSuck extends Command {
 
-    public ArmDown() {
+    public IntakeSuck() {
         requires(Robot.arm);
        // setTimeout(0.9);
     }
 
     protected void initialize() {
-    	Robot.arm.stop();
+    	Robot.intake.stop();
     }
 
     protected void execute() {
-        Robot.arm.forward();
+        Robot.intake.pickup();
     }
 
     protected boolean isFinished() {
@@ -25,7 +25,7 @@ public class ArmDown extends Command {
     }
 
     protected void end() {
-    	Robot.arm.stop();
+    	Robot.intake.stop();
     }
 
     protected void interrupted() {

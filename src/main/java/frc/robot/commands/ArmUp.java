@@ -13,7 +13,7 @@ public class ArmUp extends Command {
     }
 
     protected void initialize() {
-    	Robot.arm.reverse();
+    	Robot.arm.stop();
     }
 
     protected void execute() {

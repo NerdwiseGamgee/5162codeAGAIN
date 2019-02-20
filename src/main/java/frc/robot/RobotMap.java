@@ -31,6 +31,7 @@ public class RobotMap {
   public static Spark m_right = new Spark(1);
   public static Spark m_arm_bottom = new Spark(2);
   public static Spark m_arm_top = new Spark(3);
+  public static Spark m_intake = new Spark(4);
 
   /***********************************************************************
    * navX-MXP:

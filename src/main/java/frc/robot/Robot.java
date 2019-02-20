@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.Intake;
 import frc.robot.RobotMap;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Arm;
@@ -43,6 +44,7 @@ public class Robot extends TimedRobot {
   public static DriveTrain drivetrain;
   public static Arm arm;
   public static Basket basket;
+  public static Intake intake;
   //public static RobotMap rmap;
 
   Command m_autonomousCommand;
@@ -56,6 +58,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     arm = new Arm();
     basket = new Basket();
+    intake = new Intake();
     m_oi = new OI();
     drivetrain = new DriveTrain();
 
