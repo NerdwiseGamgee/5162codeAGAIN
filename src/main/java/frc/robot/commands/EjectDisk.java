@@ -5,20 +5,20 @@ import frc.robot.Robot;
 /**
  *
  */
-public class BasketUp extends Command {
+public class EjectDisk extends Command {
 
-    public BasketUp() {
+    public EjectDisk() {
         requires(Robot.basket);
        // setTimeout(0.9);
     }
 
     protected void initialize() {
-        Robot.basket.start();
         Robot.basket.reverse();
+        Robot.basket.eject();
     }
 
     protected void execute() {
-        Robot.basket.reverse();
+        Robot.basket.eject();
     }
 
     protected boolean isFinished() {
@@ -26,7 +26,7 @@ public class BasketUp extends Command {
     }
 
     protected void end() {
-    	Robot.basket.stop();
+    	Robot.basket.resetEject();
     }
 
     protected void interrupted() {

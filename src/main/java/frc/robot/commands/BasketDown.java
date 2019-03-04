@@ -13,8 +13,8 @@ public class BasketDown extends Command {
     }
 
     protected void initialize() {
-        Robot.basket.forward();
         Robot.basket.start();
+        Robot.basket.forward();
     }
 
     protected void execute() {

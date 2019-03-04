@@ -8,12 +8,13 @@ import frc.robot.Robot;
 public class IntakeShoot extends Command {
 
     public IntakeShoot() {
-        requires(Robot.arm);
+        requires(Robot.intake);
        // setTimeout(0.9);
     }
 
     protected void initialize() {
-    	Robot.intake.stop();
+        //Robot.intake.stop();
+        Robot.intake.shoot();
     }
 
     protected void execute() {

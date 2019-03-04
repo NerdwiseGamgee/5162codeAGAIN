@@ -9,7 +9,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.DriverStation;
+//import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.Solenoid;
@@ -29,9 +29,9 @@ public class RobotMap {
   // public static int rightMotor = 2;
   public static Spark m_left = new Spark(0);            //:LAKJSDL:KAJSDL:KAJSD:LKAJSDL:KJASDJLK
   public static Spark m_right = new Spark(1);
-  public static Spark m_arm_bottom = new Spark(2);
-  public static Spark m_arm_top = new Spark(3);
-  public static Spark m_intake = new Spark(4);
+  public static Spark m_arm = new Spark(2);
+  //public static Spark m_arm_top = new Spark(3);
+  public static Spark m_intake = new Spark(3);
 
   /***********************************************************************
    * navX-MXP:
@@ -47,8 +47,8 @@ public class RobotMap {
 
   public static AHRS ahrs = new AHRS(SPI.Port.kMXP);
   public static Compressor compressor = new Compressor(0);
-  public static Solenoid driveSolenoid = new Solenoid(1);
-  public static Solenoid shootSolenoid = new Solenoid(2);
+  public static Solenoid shootSolenoid = new Solenoid(1);
+  public static Solenoid driveSolenoid = new Solenoid(2);
   public static DoubleSolenoid doubleSolenoid = new DoubleSolenoid(3, 4);
   
   // If you are using multiple modules, make sure to define both the port

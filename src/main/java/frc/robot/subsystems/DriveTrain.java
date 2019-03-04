@@ -21,16 +21,16 @@ public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
+  public Spark l_motor = RobotMap.m_left;
+  public Spark r_motor = RobotMap.m_right;
+
+  public DifferentialDrive m_drive = new DifferentialDrive(RobotMap.m_left, RobotMap.m_right);
+
   public void drive(Joystick l_joystick, Joystick r_joystick) {
     
     m_drive.tankDrive(l_joystick.getY(), r_joystick.getY());
     
   }
-
-  public Spark l_motor = RobotMap.m_left;
-  public Spark r_motor = RobotMap.m_right;
-
-  public DifferentialDrive m_drive = new DifferentialDrive(RobotMap.m_left, RobotMap.m_right);
 
   @Override
   public void initDefaultCommand() {

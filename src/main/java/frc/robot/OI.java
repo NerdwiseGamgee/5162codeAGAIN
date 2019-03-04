@@ -26,13 +26,13 @@ public class OI {
   // Button button = new JoystickButton(stick, buttonNumber);
   public Joystick left_stick = new Joystick(0);
   public Joystick right_stick = new Joystick(1);
-  public Button armUpButton = new JoystickButton(left_stick, 1);
-  public Button armDownButton = new JoystickButton(right_stick, 1);
-  public Button shootButton = new JoystickButton(right_stick, 2);
+  public Button armUpButton = new JoystickButton(right_stick, 5);
+  public Button armDownButton = new JoystickButton(right_stick, 3);
+  public Button ejectButton = new JoystickButton(right_stick, 2);
   public Button basketUpButton = new JoystickButton(left_stick, 3); 
   public Button basketDownButton = new JoystickButton(left_stick, 2);
-  public Button intakeInButton = new JoystickButton(left_stick, 4);
-  public Button intakeOutButton = new JoystickButton(left_stick, 5);
+  public Button intakeInButton = new JoystickButton(left_stick, 1);
+  public Button intakeOutButton = new JoystickButton(right_stick, 1);
 
 
 
@@ -46,8 +46,9 @@ public class OI {
     armDownButton.whileHeld(new ArmDown());
     basketUpButton.whileHeld(new BasketUp());
     basketDownButton.whileHeld(new BasketDown());
-    intakeInButton.whileHeld(new IntakeShoot());
-    intakeOutButton.whileHeld(new IntakeSuck());
+    intakeInButton.whileHeld(new IntakeSuck());
+    intakeOutButton.whileHeld(new IntakeShoot());
+    //ejectButton.whileHeld(new EjectDisk());
     //c.setClosedLoopControl(true);
     //c.setClosedLoopControl(false);
     //exampleSolenoid.set(true);
